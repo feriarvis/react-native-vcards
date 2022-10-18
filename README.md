@@ -154,6 +154,36 @@ contact.saveToFile(`${documentPath}/eric-nesser.vcf`);
 console.log(contact.getFormattedString());
 ```
 
+```
+
+### Multiple Email, Fax, & Phone Examples
+
+`email`, `otherEmail`, `cellPhone`, `pagerPhone`, `homePhone`, `workPhone`, `homeFax`, `workFax`, `otherPhone` all support multiple entries in an array format.
+
+Examples are provided below:
+
+```js
+var vCardsJS = require('vcards-js');
+
+//create a new vCard
+var vCard = vCardsJS();
+
+//multiple email entry
+vCard.email = [
+    'e.nesser@emailhost.tld',
+    'e.nesser@emailhost2.tld',
+    'e.nesser@emailhost3.tld'
+];
+
+//multiple cellphone
+vCard.cellPhone = [
+    '312-555-1414',
+    '312-555-1415',
+    '312-555-1416'
+];
+
+```
+
 ### Contributions
 
 Contributions are always welcome!
